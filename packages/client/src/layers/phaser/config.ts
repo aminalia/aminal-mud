@@ -34,7 +34,7 @@ export const phaserConfig = {
           chunkSize: TILE_WIDTH * 64, // tile size * tile amount
           tileWidth: TILE_WIDTH,
           tileHeight: TILE_HEIGHT,
-          backgroundTile: [OverworldTileset.Tron],
+          backgroundTile: [OverworldTileset.Grass],
           animationInterval: ANIMATION_INTERVAL,
           tileAnimations: OverworldTileAnimations,
           layers: {
@@ -75,7 +75,7 @@ export const phaserConfig = {
           assetKey: Assets.MainAtlas,
           frame: "sprites/workers/donkey.png",
         },
-        [Sprites.Soldier]: {
+        [Sprites.Hero]: {
           assetKey: Assets.MainAtlas,
           frame: "sprites/warriors/hero.png",
         },
