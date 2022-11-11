@@ -32,7 +32,11 @@ export function createPositionSystem(network: NetworkLayer, phaser: PhaserLayer)
 
     const object = objectPool.get(update.entity, "Sprite");
     const { x, y } = tileCoordToPixelCoord(position, tileWidth, tileHeight);
-    const sprite = config.sprites[Sprites.Donkey];
+    const seed = Math.ceil(Math.random() * 100) % 2;
+    console.log({ seed });
+
+    const sprite = seed === 0 ? config.sprites[Sprites.Donkey] : config.sprites[Sprites.Hero];
+    // const sprite = config.sprites[Sprites.Hero]
 
     object.setComponent({
       id: Position.id,
