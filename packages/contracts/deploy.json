@@ -1,8 +1,8 @@
 {
-  "components": ["PositionComponent", "CarriedByComponent"],
+  "components": ["PositionComponent", "AffectionComponent"],
   "systems": [
     { "name": "ComponentDevSystem", "writeAccess": ["*"] },
     { "name": "MoveSystem", "writeAccess": ["PositionComponent"] },
-    { "name": "CatchSystem", "writeAccess": ["PositionComponent", "CarriedByComponent"] }
+    { "name": "FeedSystem", "writeAccess": ["AffectionComponent"] }
   ]
 }

@@ -39,11 +39,6 @@ export async function createNetworkLayer(config: GameConfig) {
     systems["system.Move"].executeTyped(BigNumber.from(network.connectedAddress.get()), coord);
   }
 
-  function catchNeighbor(coord: Coord) {
-    console.log(network.connectedAddress.get());
-    systems["system.Catch"].executeTyped(coord);
-  }
-
   // --- CONTEXT --------------------------------------------------------------------
   const context = {
     world,
@@ -54,7 +49,7 @@ export async function createNetworkLayer(config: GameConfig) {
     startSync,
     network,
     actions,
-    api: { move, catchNeighbor },
+    api: { move },
     dev: setupDevSystems(world, encoders, systems),
   };
 
